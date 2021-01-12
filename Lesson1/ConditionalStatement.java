@@ -1,6 +1,5 @@
 public class ConditionalStatement {
 	public static void main(String[] args) {
-		
 		byte age = 33;
 		boolean isMale = true;
 		float hght = 1.83f;
