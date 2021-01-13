@@ -7,15 +7,15 @@ public class Variable {
 		float mem = 41.6f;
 		double eMath = 2.71828182845904d;
 		char coreModel = 'C';
-		boolean itWorks=true;
+		boolean itWorks = true;
 		
-		System.out.println("coreNum "+coreNum);
-		System.out.println("maxMemory "+maxMemory);
-		System.out.println("oneCoreFr "+oneCoreFr);
-		System.out.println("hdVolume "+hdVolume);
-		System.out.println("mem "+mem);
-		System.out.println("eMath "+eMath);
-		System.out.println("coreModel "+coreModel);
-		System.out.println("itWorks? "+itWorks);
+		System.out.println("coreNum " + coreNum);
+		System.out.println("maxMemory " + maxMemory);
+		System.out.println("oneCoreFr " + oneCoreFr);
+		System.out.println("hdVolume " + hdVolume);
+		System.out.println("mem "+ mem);
+		System.out.println("eMath " + eMath);
+		System.out.println("coreModel " + coreModel);
+		System.out.println("itWorks? " + itWorks);
 	}
 }
