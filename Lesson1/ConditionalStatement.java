@@ -14,11 +14,10 @@ public class ConditionalStatement {
 			System.out.println("Maybe a girl?");
 		}
 		
-		float hght = 1.83f;
-		if (hght < 1.80) {
+		float height = 1.83f;
+		if (height < 1.80) {
 			System.out.println("Shorter than average");
-		}
-		else {
+		} else {
 			System.out.println("Average or higher");	
 		}
 		
@@ -27,8 +26,7 @@ public class ConditionalStatement {
 			System.out.println("Mihkail?");
 		} else if (firstNameLetter == 'I') {
 			System.out.println("Irina?");
-		} 
-		else {
+		} else {
 			System.out.println("Other name");
 		}
 	}
