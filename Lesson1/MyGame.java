@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class MyGame {
     public static void main(String[] args) {
-        int number = 78;
+        int gameNumber = 78;
         //System.out.println(number);
         Scanner scan = new Scanner(System.in);
         int myNumber = 0;
@@ -17,15 +17,13 @@ public class MyGame {
                 System.out.println("Your variant is out of the range (0,100], try again");
                 continue;
             } 
-            if (myNumber < number) {
+            if (myNumber < gameNumber) {
                 System.out.println("My number is greater, try again");
-            } else if (myNumber > number) {
+            } else if (myNumber > gameNumber) {
                 System.out.println("My number is smaller, try again");
-            } else {
-                System.out.println("You guessed, my number was " + number);
             }
-            
-        } while (number != myNumber);
+        } while (gameNumber != myNumber);
+        System.out.println("You guessed, my number was " + gameNumber);
         scan.close();
     }
 }
