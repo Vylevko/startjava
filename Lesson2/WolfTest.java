@@ -1,13 +1,8 @@
 public class WolfTest {
-    public static void main (String[] args) {
+    public static void main(String[] args) {
         Wolf wolfFirst = new Wolf();
         wolfFirst.setIsMail(false);
-        int age = 7;
-        if (age > 8) {
-            System.out.println("Invalid age");
-        } else { 
-            wolfFirst.setAge(age);
-        }
+        wolfFirst.setAge(7);
         wolfFirst.setColor("White");
         wolfFirst.setNickName("SherstyanoyVol4ara");
         wolfFirst.setWeight(25);
