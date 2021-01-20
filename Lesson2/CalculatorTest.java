@@ -29,9 +29,7 @@ public class CalculatorTest {
                 String errorValue = scan.next();
                 System.out.println("[" + errorValue + "] Your First value is out of the range");
             }
-             
             do {
-
                 System.out.println("Do You want to continue Y/N ");
                 reAsk = false;
                 String choise = scan.next();
