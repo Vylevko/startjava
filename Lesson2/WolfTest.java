@@ -1,13 +1,13 @@
 public class WolfTest {
     public static void main(String[] args) {
         Wolf wolfFirst = new Wolf();
-        wolfFirst.setIsMail(false);
+        wolfFirst.setMail(false);
         wolfFirst.setAge(7);
         wolfFirst.setColor("White");
         wolfFirst.setNickName("SherstyanoyVol4ara");
         wolfFirst.setWeight(25);
         
-        if (wolfFirst.getIsMail()) {
+        if (wolfFirst.IsMail()) {
             System.out.println("Good Boy");
         } else {
             System.out.println("Good Girl");

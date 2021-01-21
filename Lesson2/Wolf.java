@@ -5,11 +5,11 @@ public class Wolf {
     private int age;
     private String color;
 
-    public void setIsMail(boolean isMail) {
+    public void setMail(boolean isMail) {
         this.isMail = isMail;
     }
 
-    public boolean getIsMail() {
+    public boolean IsMail() {
         return isMail;
     }
 

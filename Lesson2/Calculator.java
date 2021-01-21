@@ -1,8 +1,6 @@
 public class Calculator {
-    private boolean incorrectAction;
-    int executeCalculation (int a, int b, char action) {
+    int calculate (int a, int b, char action) {
         int result = 1;
-        incorrectAction = false;
         switch (action) {
             case '+': result = a + b;
                 break;
@@ -19,14 +17,9 @@ public class Calculator {
                     result *= a;
                 }
                 break;
-            default: incorrectAction = true ;
+            default: System.out.println("Action is incorrect");
                 break;
         }
-    return result;
+        return result;
     }
-    
-    boolean getIncorrectAction() {
-        return incorrectAction;
-    }
-        
 }
