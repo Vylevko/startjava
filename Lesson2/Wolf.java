@@ -9,7 +9,7 @@ public class Wolf {
         this.isMail = isMail;
     }
 
-    public boolean IsMail() {
+    public boolean isMail() {
         return isMail;
     }
 

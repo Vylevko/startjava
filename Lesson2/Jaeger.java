@@ -8,6 +8,31 @@ public class Jaeger {
     private int strength;
     private int armor;
 
+    public Jaeger(String modelName,String mark, String origin, float weight, float height, int speed, int strength, int armor) {
+        this.modelName = modelName;
+        this.mark = mark;
+        this.origin = origin;
+        this.weight = weight;
+        this.height = height;
+        this.speed = speed;
+        this.strength = strength;
+        this.armor = armor;
+    }
+    public Jaeger() {
+        modelName = "Default model";
+        mark = "Mark-1";
+        origin = "USA";
+        weight = 2.1f;
+        height = 77.4f;
+        speed = 7;
+        strength = 7;
+        armor = 7;
+    }
+
+    public Jaeger(Jaeger j) {
+        this (j.modelName, j.mark, j.origin, j.weight, j.height, j.speed, j.strength, j.armor);
+    }
+
     public void setModelName(String modelName) {
         this.modelName = modelName;
     }
@@ -55,7 +80,7 @@ public class Jaeger {
     public int getSpeed() {
         return speed;
     }
-    
+
     public void setStrength(int strength) {
         this.strength = strength;
     }
