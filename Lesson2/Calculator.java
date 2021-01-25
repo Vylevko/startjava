@@ -18,7 +18,7 @@ public class Calculator {
                 result = a % b;
                 break;
             case '^':
-                result = 0;
+                result = 1;
                 for (int i = 0; i < b; i++) {
                     result *= a;
                 }

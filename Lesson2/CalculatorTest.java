@@ -9,25 +9,27 @@ public class CalculatorTest {
             System.out.println("Insert first value");
             if (scan.hasNextInt()) {
                 int a = scan.nextInt();
-                System.out.println("Insert action value(+, -, *, /, ^, %)");
 
+                System.out.println("Insert action value(+, -, *, /, ^, %)");
                 char action = scan.next().charAt(0);
+
                 System.out.println("Insert second value");
                 if (scan.hasNextInt()) {
                     int b = scan.nextInt();
                     int result = calc.calculate(a, b, action);
-                    System.out.println(a + " " + action + " " + b + " = " + result );
+                    System.out.println(a + " " + action + " " + b + " = " + result);
                 } else {
-                    String errorValue = scan.next();
-                    System.out.println("[" + errorValue + "] Your Second value is out of the range");
+                    System.out.println("Your Second value is out of the range");
                 }
             } else {
-                String errorValue = scan.next();
-                System.out.println("[" + errorValue + "] Your First value is out of the range");
+                System.out.println("Your First value is out of the range");
             }
+            scan.nextLine();
+            scan.nextLine();
             do {
                 System.out.println("Do You want to continue, please answer only Y/N ");
-                choise = scan.next().charAt(0);
+                choise = scan.nextLine().charAt(0);
+                System.out.println("choise" + choise);
             } while (!(choise == 'Y' || choise == 'N'));
         } while (choise != 'N');
         System.out.println("End");
