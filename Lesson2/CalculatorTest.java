@@ -25,11 +25,9 @@ public class CalculatorTest {
                 System.out.println("Your First value is out of the range");
             }
             scan.nextLine();
-            scan.nextLine();
             do {
                 System.out.println("Do You want to continue, please answer only Y/N ");
-                choise = scan.nextLine().charAt(0);
-                System.out.println("choise" + choise);
+                choise = scan.next().charAt(0);
             } while (!(choise == 'Y' || choise == 'N'));
         } while (choise != 'N');
         System.out.println("End");

@@ -3,20 +3,15 @@ public class Calculator {
         int result = 0;
         switch (action) {
             case '+':
-                result = a + b;
-                break;
+                return a + b;
             case '-':
-                result = a - b;
-                break;
+                return a - b;
             case '*':
-                result = a * b;
-                break;
+                return a * b;
             case '/':
-                result = a / b;
-                break;
+                return a / b;
             case '%':
-                result = a % b;
-                break;
+                return a % b;
             case '^':
                 result = 1;
                 for (int i = 0; i < b; i++) {
