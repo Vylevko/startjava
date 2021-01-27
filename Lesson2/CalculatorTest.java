@@ -5,6 +5,7 @@ public class CalculatorTest {
         Scanner scan = new Scanner(System.in);
         Calculator calc = new Calculator();
         char choise;
+        String trash;
         do {
             System.out.println("Insert first value");
             if (scan.hasNextInt()) {
@@ -16,15 +17,17 @@ public class CalculatorTest {
                 System.out.println("Insert second value");
                 if (scan.hasNextInt()) {
                     int b = scan.nextInt();
+                    scan.nextLine();
                     int result = calc.calculate(a, b, action);
                     System.out.println(a + " " + action + " " + b + " = " + result);
                 } else {
+                    trash = scan.next();
                     System.out.println("Your Second value is out of the range");
                 }
             } else {
+                trash = scan.next();
                 System.out.println("Your First value is out of the range");
             }
-            scan.nextLine();
             do {
                 System.out.println("Do You want to continue, please answer only Y/N ");
                 choise = scan.next().charAt(0);

@@ -8,12 +8,12 @@ public class Jaeger {
     private int strength;
     private int armor;
 
-    public Jaeger(Jaeger j) {
-        this(j.modelName, j.mark, j.origin, j.weight, j.height, j.speed, j.strength, j.armor);
-    }
-
     public Jaeger() {
         this("Default model", "Mark-1", "USA", 2.1f, 77.4f, 7, 7, 7);
+    }
+
+    public Jaeger(Jaeger j) {
+        this(j.modelName, j.mark, j.origin, j.weight, j.height, j.speed, j.strength, j.armor);
     }
 
     public Jaeger(String modelName, String mark, String origin, float weight, float height, int speed, int strength, int armor) {

@@ -17,40 +17,32 @@ public class GuessNumber {
     }
 
     public void start() {
-        int count = 1;
         System.out.println("Computer generated valie from the range (0,100]");
         do { 
-            if (count % 2 == 1) {
-                System.out.println("Round " + count + "! " + player1.getName() + ", Your turn to guess");
-            } else {
-                System.out.println("Round " + count + "! " + player2.getName() + ", Your turn to guess");
-            }
+            System.out.println("Insert value from the range (0,100]");
             if (scan.hasNextInt()) {
-                gameFinished = numberGuessed(scan.nextInt());
+                gameFinished = guessNumber(scan.nextInt());
                 scan.nextLine();
             } else {
                 System.out.println("Failed to insert valid value");
                 scan.nextLine();
             }
             //System.out.println(generatedNumber);
-            count++;
         } while (!gameFinished);
         System.out.println("Your Won!!!! GZ");
     }
 
-    private boolean numberGuessed(int insertedNumber ) {
-        if (!(insertedNumber > 0 && insertedNumber <= 100)) {
+    private boolean guessNumber(int Number) {
+        if (!(Number > 0 && Number <= 100)) {
             System.out.println("Inserted value is out the range (0,100]");
-            return false;
-        } else if (insertedNumber > generatedNumber) {
+        } else if (Number > generatedNumber) {
             System.out.println("Generated number is less than yourth");
-            return false;
-        } else if (insertedNumber < generatedNumber) {
+        } else if (Number < generatedNumber) {
             System.out.println("Generated number is greater than yourth");
-            return false;
         } else {
             System.out.println("Correct");
             return true;
         }
+    return false;
     }
 }
