@@ -3,7 +3,6 @@ import java.util.Scanner;
 
 public class GuessNumber {
     private int generatedNumber;
-    private boolean gameFinished;
     private Player player1;
     private Player player2;
     Random random = new Random();
@@ -11,7 +10,6 @@ public class GuessNumber {
 
     public GuessNumber(Player player1, Player player2) {
         generatedNumber = random.nextInt(100) + 1;
-        gameFinished = false;
         this.player1 = player1;
         this.player2 = player2;
     }
@@ -19,17 +17,35 @@ public class GuessNumber {
     public void start() {
         System.out.println("Computer generated valie from the range (0,100]");
         do { 
-            System.out.println("Insert value from the range (0,100]");
+            System.out.println(player1.getName() + ", Your turn, insert value from the range (0,100]");
             if (scan.hasNextInt()) {
-                gameFinished = guessNumber(scan.nextInt());
+                player1.setNumber(scan.nextInt());
                 scan.nextLine();
             } else {
-                System.out.println("Failed to insert valid value");
+                player1.setNumber(0);
                 scan.nextLine();
             }
+            
+            if (guessNumber(player1.getNumber())) {
+                System.out.println(player1.getName() + " Won!!!! GZ");
+                break;
+            }   
+            System.out.println(player2.getName() + ", Your turn, insert value from the range (0,100]");
+            if (scan.hasNextInt()) {
+                player2.setNumber(scan.nextInt());
+                scan.nextLine();
+            } else {
+                player1.setNumber(0);
+                scan.nextLine();
+            }
+            
+            if (guessNumber(player2.getNumber())) {
+                System.out.println(player2.getName() + " Won!!!! GZ");
+                break;
+            }
             //System.out.println(generatedNumber);
-        } while (!gameFinished);
-        System.out.println("Your Won!!!! GZ");
+        } while (true);
+        
     }
 
     private boolean guessNumber(int Number) {
