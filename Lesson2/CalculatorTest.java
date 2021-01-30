@@ -9,7 +9,7 @@ public class CalculatorTest {
             System.out.println("Insert first value");
             if (scan.hasNextInt()) {
                 int a = scan.nextInt();
-
+                scan.nextLine();
                 System.out.println("Insert action value(+, -, *, /, ^, %)");
                 char action = scan.next().charAt(0);
 

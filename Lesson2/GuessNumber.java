@@ -3,7 +3,6 @@ import java.util.Scanner;
 
 public class GuessNumber {
     private int generatedNumber;
-    private int number;
     private Player player1;
     private Player player2;
     Random random = new Random();
@@ -19,17 +18,14 @@ public class GuessNumber {
         System.out.println("Computer generated valie from the range (0,100]");
         do { 
             System.out.println(player1.getName() + ", Your turn, insert value from the range (0,100]");
-            player1.setNumber(insertNumber());
-            
-            if (guessNumber(player1.getNumber())) {
-                System.out.println(player1.getName() + " Won!!!! GZ");
+            inputNumber(player1);
+            if (guessNumber(player1)) {
                 break;
-            }   
-            System.out.println(player2.getName() + ", Your turn, insert value from the range (0,100]");
-            player2.setNumber(insertNumber());
+            } 
             
-            if (guessNumber(player2.getNumber())) {
-                System.out.println(player2.getName() + " Won!!!! GZ");
+            System.out.println(player2.getName() + ", Your turn, insert value from the range (0,100]");
+            inputNumber(player2);
+            if (guessNumber(player2)) {
                 break;
             }
             System.out.println(generatedNumber);
@@ -37,31 +33,30 @@ public class GuessNumber {
         
     }
 
-    private boolean guessNumber(int number) {
-        if (number != 0) {
-            if (number > generatedNumber) {
+    private boolean guessNumber(Player player) {
+        if (player.getNumber() != 0) {
+            if (player.getNumber() > generatedNumber) {
                 System.out.println("Generated number is less than yourth");
-            } else if (number < generatedNumber) {
+            } else if (player.getNumber() < generatedNumber) {
                 System.out.println("Generated number is greater than yourth");
             } else {
-                System.out.println("Correct");
+                System.out.println("Correct " + player.getName() + " Won!!!! GZ");
                 return true;
             }
         }
         return false;
     }
     
-    private int insertNumber() {
+    private void inputNumber(Player player) {
         if (scan.hasNextInt()) {
-            number = scan.nextInt();
+            player.setNumber(scan.nextInt());
             scan.nextLine();
         } else {
-            number = 0;
+            player.setNumber(0);
             scan.nextLine();
         }
-        if(!(number > 0 && number <= 100)) {
+        if(!(player.getNumber() > 0 && player.getNumber()  <= 100)) {
             System.out.println("Inserted value is out the range (0,100]");
         }
-            return number;
     }   
 }
